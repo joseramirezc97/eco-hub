@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ApiSidebarComponent } from '../../components/layout/api-sidebar/api-sidebar';
+import { ApiSidebar } from '../../components/layout/api-sidebar/api-sidebar';
 
 @Component({
   selector: 'app-api-details',
-  imports: [ApiSidebarComponent],
+  imports: [ApiSidebar],
   templateUrl: './api-details.html',
   styleUrl: './api-details.scss'
 })

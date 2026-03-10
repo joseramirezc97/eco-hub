@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { SidebarComponent } from '../../components/layout/sidebar/sidebar';
+import { Sidebar } from '../../components/layout/sidebar/sidebar';
 
 @Component({
   selector: 'app-guideline-editor',
-  imports: [SidebarComponent],
+  imports: [Sidebar],
   templateUrl: './guideline-editor.html',
   styleUrl: './guideline-editor.scss',
 })

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { LibSidebarComponent } from '../../components/layout/lib-sidebar/lib-sidebar';
+import { LibSidebar } from '../../components/layout/lib-sidebar/lib-sidebar';
 
 @Component({
   selector: 'app-guidelines-library',
-  imports: [LibSidebarComponent],
+  imports: [LibSidebar],
   templateUrl: './guidelines-library.html',
   styleUrl: './guidelines-library.scss'
 })
