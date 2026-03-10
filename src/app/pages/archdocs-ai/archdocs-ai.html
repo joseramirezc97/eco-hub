@@ -147,19 +147,19 @@
           <div class="space-y-1">
             <div class="text-green-500 opacity-60">/// [AuthService] implements a robust</div>
             <div class="text-green-500 opacity-60">/// circuit-breaker for secure Auth calls.</div>
-            <div class="text-blue-400">class <span class="text-yellow-300">AuthService</span> {</div>
+            <div class="text-blue-400">class <span class="text-yellow-300">AuthService</span> {{ '{' }}</div>
             <div class="pl-4 text-slate-300">final <span class="text-yellow-300">Client</span> _http;</div>
             <div class="pl-4 text-slate-300">final <span class="text-yellow-300">SecureStorage</span> _vault;</div>
             <div class="pl-4 py-2 text-green-500 opacity-60">/// Handles token hydration with retries</div>
-            <div class="pl-4 text-slate-300"><span class="text-purple-400">Future</span>&lt;void&gt; refresh() <span class="text-purple-400">async</span> {</div>
-            <div class="pl-8 text-slate-300">try {</div>
+            <div class="pl-4 text-slate-300"><span class="text-purple-400">Future</span>&lt;void&gt; refresh() <span class="text-purple-400">async</span> {{ '{' }}</div>
+            <div class="pl-8 text-slate-300">try {{ '{' }}</div>
             <div class="pl-12 text-slate-300"><span class="text-blue-400">final</span> token = <span class="text-purple-400">await</span> _vault.read(<span class="text-orange-400">'key'</span>);</div>
             <div class="pl-12 text-slate-300"><span class="text-blue-400">if</span> (token == <span class="text-purple-400">null</span>) <span class="text-purple-400">throw</span> AuthEx();</div>
-            <div class="pl-8 text-slate-300">} catch (e) {</div>
+            <div class="pl-8 text-slate-300">{{ '}' }} catch (e) {{ '{' }}</div>
             <div class="pl-12 text-primary opacity-80">_logger.error(<span class="text-orange-400">'Auth Failure'</span>, e);</div>
-            <div class="pl-8 text-slate-300">}</div>
-            <div class="pl-4 text-slate-300">}</div>
-            <div class="text-slate-300">}</div>
+            <div class="pl-8 text-slate-300">{{ '}' }}</div>
+            <div class="pl-4 text-slate-300">{{ '}' }}</div>
+            <div class="text-slate-300">{{ '}' }}</div>
           </div>
         </div>
       </div>

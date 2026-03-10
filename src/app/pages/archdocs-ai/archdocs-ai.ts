@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ArchdocsNavComponent } from '../../components/layout/archdocs-nav/archdocs-nav';
+import { ArchdocsNav } from '../../components/layout/archdocs-nav/archdocs-nav';
 
 @Component({
   selector: 'app-archdocs-ai',
-  imports: [ArchdocsNavComponent],
+  imports: [ArchdocsNav],
   templateUrl: './archdocs-ai.html',
   styleUrl: './archdocs-ai.scss'
 })

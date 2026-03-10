@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ApprovalSidebarComponent } from '../../components/layout/approval-sidebar/approval-sidebar';
-import { ApprovalCommentsComponent } from '../../components/layout/approval-comments/approval-comments';
+import { ApprovalSidebar } from '../../components/layout/approval-sidebar/approval-sidebar';
+import { ApprovalComments } from '../../components/layout/approval-comments/approval-comments';
 
 @Component({
   selector: 'app-guideline-approval',
-  imports: [ApprovalSidebarComponent, ApprovalCommentsComponent],
+  imports: [ApprovalSidebar, ApprovalComments],
   templateUrl: './guideline-approval.html',
   styleUrl: './guideline-approval.scss'
 })

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { TechGuidelinesSidebarComponent } from '../../components/layout/tech-guidelines-sidebar/tech-guidelines-sidebar';
+import { TechGuidelinesSidebar } from '../../components/layout/tech-guidelines-sidebar/tech-guidelines-sidebar';
 
 @Component({
   selector: 'app-technical-guidelines',
-  imports: [TechGuidelinesSidebarComponent],
+  imports: [TechGuidelinesSidebar],
   templateUrl: './technical-guidelines.html',
   styleUrl: './technical-guidelines.scss'
 })
