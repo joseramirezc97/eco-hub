@@ -1,0 +1,217 @@
+<div class="flex flex-1 gap-8">
+  <aside class="w-64 shrink-0 flex flex-col gap-6">
+    <app-sidebar-filters></app-sidebar-filters>
+  </aside>
+
+  <!-- Main Gallery -->
+  <main class="flex-1">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="font-header text-3xl text-slate-900 dark:text-slate-100">Component Registry</h2>
+        <p class="text-slate-500 mt-1">Discover and integrate shared enterprise modules.</p>
+      </div>
+      <div class="flex gap-2">
+        <button class="flex items-center gap-2 px-4 py-2 glass-panel rounded-xl text-sm font-semibold hover:bg-white/60 transition-colors">
+          <span class="material-symbols-outlined text-lg">sort</span>
+          Recently Updated
+        </button>
+      </div>
+    </div>
+
+    <!-- Grid of Package Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="glass-panel p-6 rounded-xl hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col group cursor-pointer border-white/60">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-white/40 shadow-sm">
+            <span class="material-symbols-outlined text-primary">shield_person</span>
+          </div>
+          <span class="px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">STABLE</span>
+        </div>
+        <h3 class="font-header text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">@internal/auth-ui</h3>
+        <p class="text-xs text-slate-400 mt-0.5">v2.4.1 • Updated 2d ago</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 line-clamp-2">Standardized authentication flow components including MFA, SSO, and login forms.</p>
+        
+        <div class="mt-6 flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Health Score</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100">140/140</span>
+          </div>
+          <div class="flex -space-x-2">
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQc5EBg6TNrC32CBZwsgnxBTWO_EPodKnh-Z2qa4-JKeO_7vum4IAxuMTL-qZ5iZKjDgs1YWfKeXj5lvsi9d-HXreEusxZDoOBBlvVxe0RwpAyG7AltM1fA9gJWkyoNEzpzpely0C8ejr9oPqcnnUhLsOtzsgEdMgvjVt1hJt9g-s6MLao_kDpikvh5IW_69AdPEqxn4DiHz2NgW0pDG6LAKPMQcUWvJ68iAFPxt-n0lpICnELB630tN0i1-UzsGzAJBEKRRftg3HH')"></div>
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-300" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbSg7QnsmtX07UfnB2e3R0d6LNZRplSL7XOQzXlGSyR4v572Uxyw0_nIFsi-TESbrIamYr8So7dLVLaKfzqdmRsF7HejDAdxiGNSLRbMXOf6I-j2Wl6jYmKCP4bWVezci74ec2Y07rzeFbpPxx5NLaOwNu2WIeFPO7ORwF_Ny1h4Fg0R61Jn6hpdWhuQbl3OMn_-zuNQgVxiq37uzGnEOi6Jl13sFnegV1Q1G1885e992W1kkZwfsXRccHZxc8XsdzVTem-bDRDd0l')"></div>
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-primary/10 flex items-center justify-center text-[8px] font-bold text-primary">+4</div>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">React</span>
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">TypeScript</span>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="glass-panel p-6 rounded-xl hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col group cursor-pointer border-white/60">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-white/40 shadow-sm">
+            <span class="material-symbols-outlined text-primary">analytics</span>
+          </div>
+          <span class="px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">BETA</span>
+        </div>
+        <h3 class="font-header text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">@internal/charts-sdk</h3>
+        <p class="text-xs text-slate-400 mt-0.5">v0.9.4 • Updated 5h ago</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 line-clamp-2">Enterprise-grade charting library built on top of Flutter Canvas with accessibility support.</p>
+        
+        <div class="mt-6 flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Health Score</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100">132/140</span>
+          </div>
+          <div class="flex -space-x-2">
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcEUrCyKBr35n_wSRCMwO2uikJd4wneu7Q84rwaDBXXSL9jdCaTLSiG3HDGUT9s7ANHPbpjyIRj7aTli8_5Hv8txpCkyE7GV2TvcQkXNF6TZSNZQ8NeTYqJ3nzAxreibYqTh_PDiL76U2wSlaC49_LjrSW0c_kUL3_sMaGK9OBKyLYtRGs5oeAWKOkY83Uke3caagmVy9orx5-eYj4Bm5x2QsJ5iJ6AH9EFEIekBA5DD5PhmxbUlRzhOCyEAAKoqTiv_7nAlYxfwMc')"></div>
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-primary/10 flex items-center justify-center text-[8px] font-bold text-primary">+12</div>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">Flutter</span>
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">Dart</span>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="glass-panel p-6 rounded-xl hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col group cursor-pointer border-white/60">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-white/40 shadow-sm">
+            <span class="material-symbols-outlined text-primary">database</span>
+          </div>
+          <span class="px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">STABLE</span>
+        </div>
+        <h3 class="font-header text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">@internal/data-core</h3>
+        <p class="text-xs text-slate-400 mt-0.5">v5.1.0 • Updated 1w ago</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 line-clamp-2">Unified data access layer and caching mechanism for internal microservices.</p>
+        
+        <div class="mt-6 flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Health Score</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100">140/140</span>
+          </div>
+          <div class="flex -space-x-2">
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeIN6Sb9iNZR8v-m0uvXusaikoj9UdbRBkBFoe2Td4Wx7yF4xTCdfqsUaHK9W5cNJir81gmAf1CPxsJch8Lb1ctDudTMHM9B_41f2IHdAUqKcHYzLBxB50hIiZFenPzm44gltHjFacyUlGTnFYE2b1149lAASO6WP3_qk1WmeLVyKYuPZweEWyOpQy0TgOIFdaz7nKokbKi8XCB3X9XbCIVFjaH9nS_ARi6nEFcoz9gGXn6ayY96EXjqA7WQo0Pgi4aX1rmraDelVJ')"></div>
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-300" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhkGL1zFw2OBiV7glTTm17sRv3tGsCPDTi7F1zI_l6HE8Gpu323u3KLxYTFmcbI5HPRPMcAc-Wg_gysEGe9GoIqIaM0IEaH3OuizSyc8oLRXYb6H6G0kx1EH0xpIVnSr3KXeg2_CB8HW4eiinn3Qs1dzvPAtWEmADzfKQlPNIjnFbvtlCo3QdP7Zn4KHdFC_r7i3jlY2T_VTC1nmTd1GqtiJpczx5X7SA1Uu7h-glT8IXuh7xbGWlW6XYrV_3eqgmnLkD96kbLh4Og')"></div>
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-primary/10 flex items-center justify-center text-[8px] font-bold text-primary">+8</div>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">.NET Core</span>
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">C#</span>
+        </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="glass-panel p-6 rounded-xl hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col group cursor-pointer border-white/60">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-white/40 shadow-sm">
+            <span class="material-symbols-outlined text-primary">palette</span>
+          </div>
+          <span class="px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400">EXP</span>
+        </div>
+        <h3 class="font-header text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">@internal/theme-gen</h3>
+        <p class="text-xs text-slate-400 mt-0.5">v0.1.2 • Updated 3d ago</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 line-clamp-2">Experimental tool for generating cross-platform design tokens and CSS variables.</p>
+        
+        <div class="mt-6 flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Health Score</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100">98/140</span>
+          </div>
+          <div class="flex -space-x-2">
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC62uv0z8lAdvry2u-qqJfpwGGM5eqXyNCRK2O7p74WMINYW4-gqoMH8LiSgF-y4coa8SEFKFRdm9f1A7Jk-_OEDS7RUN2LLBK2FJAazc9TuyXRtmK_-NPMJ9LzuD42tsZPRevVBvke-Lbdy_CyTbXF-ur8GiRKrG4KkLKesC1AC0K4xccq4bEzO7FPXTmclxIiW6TBVizu9J9H4MR6qKePLZvJSB9mdX7OaZfKGDq061JD0RdXSANWIfXhHY7sGJz90ZDd1V8LpEc8')"></div>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">Tooling</span>
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">NodeJS</span>
+        </div>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="glass-panel p-6 rounded-xl hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col group cursor-pointer border-white/60">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-white/40 shadow-sm">
+            <span class="material-symbols-outlined text-primary">navigation</span>
+          </div>
+          <span class="px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">STABLE</span>
+        </div>
+        <h3 class="font-header text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">@internal/nav-shell</h3>
+        <p class="text-xs text-slate-400 mt-0.5">v1.12.0 • Updated 6d ago</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 line-clamp-2">Main application shell with global sidebar and responsive layout handlers.</p>
+        
+        <div class="mt-6 flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Health Score</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100">140/140</span>
+          </div>
+          <div class="flex -space-x-2">
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwdsqTBGEwh8f2c1TYwWdUf7OJkdMoC4WY7VxsORlMJCDWgLEVd8dBapGTIW10XWWDQT2bGnvSufhL_ZhiW4sUjQn7lpruNYxG9TUMvvh-lTEO7naZH_fUw4n-IxAGljIkO-P4jcALcJxcCoIa6Pwh9pVACafL5-soZnXjYj2yloCEDYugMC8O2uyUNiiQArVMouoBhlKRwde3ZftfsXCaTIpQbR-yarFEfLSTEC__FMOFDkwlYhhmW1h-Il3My8YcQUF6NwP7P79y')"></div>
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-300" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBl3V_2bGPWd62UXM0mcEOXFW705MtwytCHxzcBvAdtKnLdYqOp7U55dB__iDDpBo99bRSJ-3tUMCU-1bLDF6EBPtJQmLVKIsYrkPB86bmPmvX9yrwQTGKXRyqL_vGZ5XkuAAc4xozN9sMI9peYOSHWafeLTBdobvYkoT5jXg-Cacb5FlD1ddWCqH4Oah5QX4ZureErT289sKdD3x3cnSzil2qnnVNxg2rXDyesWOowgFY9e8MfdikS93rY3GB7be0LjHuFIiGa1d5T')"></div>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">React</span>
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">Layout</span>
+        </div>
+      </div>
+      
+      <!-- Card 6 -->
+      <div class="glass-panel p-6 rounded-xl hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col group cursor-pointer border-white/60">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-white/40 shadow-sm">
+            <span class="material-symbols-outlined text-primary">payments</span>
+          </div>
+          <span class="px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">BETA</span>
+        </div>
+        <h3 class="font-header text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">@internal/payments-kit</h3>
+        <p class="text-xs text-slate-400 mt-0.5">v0.4.0 • Updated 2h ago</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 line-clamp-2">PCI-compliant payment processing SDK for integrated point-of-sale systems.</p>
+        
+        <div class="mt-6 flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-[10px] uppercase font-bold text-slate-400">Health Score</span>
+            <span class="text-sm font-bold text-slate-900 dark:text-slate-100">121/140</span>
+          </div>
+          <div class="flex -space-x-2">
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200" data-alt="Contributor avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5-IxSfCWO7NKLYYvXV828ApYeERMmhnz43M3yNTF-2mTDIkzbCg6pysuMWAXMw0U74eCjRz3jJf56Tkaoxfh5wlGXI1WCm0BKC6OA2YOUX7BHxKj1J_4R2_zpvm5pZbC3JN7gJr17drk2CdX2HFmqigO5XSK5KJt0GMODgPHNglV8j-1mLpfqSkobmjNCO6CqOhNNVSRbke7EzWXh4844BVuyCQ7N3yCHzblGwpYp0c9fSUDfI2pXsI2rcW9iQjW9gXI5qdrx__Ra')"></div>
+            <div class="w-6 h-6 rounded-full border-2 border-white bg-primary/10 flex items-center justify-center text-[8px] font-bold text-primary">+2</div>
+          </div>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">.NET Core</span>
+          <span class="px-2 py-1 bg-white/50 rounded-md text-[10px] font-bold text-slate-500">FinTech</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="mt-12 flex justify-center">
+      <nav class="flex items-center gap-1 glass-panel p-1 rounded-xl">
+        <button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/60 text-slate-600">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+        <button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/60 text-slate-600 font-bold">2</button>
+        <button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/60 text-slate-600 font-bold">3</button>
+        <span class="px-2 text-slate-400">...</span>
+        <button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/60 text-slate-600 font-bold">12</button>
+        <button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/60 text-slate-600">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </nav>
+    </div>
+  </main>
+</div>

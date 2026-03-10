@@ -1,0 +1,180 @@
+<div class="flex gap-6 max-w-[1600px] mx-auto">
+  <!-- Left Sidebar: Hierarchical Navigation -->
+  <aside class="w-72 shrink-0 hidden lg:block">
+    <app-tech-guidelines-sidebar></app-tech-guidelines-sidebar>
+  </aside>
+
+  <!-- Main Content Area -->
+  <section class="flex-1 min-w-0">
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 text-xs font-medium text-slate-500 mb-6 uppercase tracking-wider">
+      <a class="hover:text-primary" href="#">Home</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <a class="hover:text-primary" href="#">Guidelines</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <span class="text-primary font-bold">Architecture</span>
+    </nav>
+
+    <div class="glass-panel rounded-xl p-8 lg:p-12 shadow-sm">
+      <!-- Header Metadata -->
+      <header class="mb-12">
+        <h1 class="font-header text-5xl font-black text-slate-900 dark:text-slate-100 mb-6 leading-[1.1]">Technical Guidelines for Cloud Architecture</h1>
+        
+        <div class="flex flex-wrap items-center gap-6 py-4 border-y border-primary/5">
+          <div class="flex items-center gap-2">
+            <div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-lg">engineering</span>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase font-bold text-slate-400">Author</p>
+              <p class="text-sm font-semibold">Ecosystem Engineering Team</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-2 border-l border-primary/10 pl-6">
+            <div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-lg">update</span>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase font-bold text-slate-400">Last Updated</p>
+              <p class="text-sm font-semibold">Oct 24, 2023</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-2 border-l border-primary/10 pl-6">
+            <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-black rounded uppercase tracking-tighter">v2.4.1 Stable</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Editorial Content -->
+      <article class="prose prose-slate prose-lg max-w-none dark:prose-invert">
+        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+          This document outlines the mandatory architectural patterns and principles for all cloud-native applications within the Ecosystem Hub. These standards ensure high availability, scalability, and seamless integration across the global infrastructure.
+        </p>
+        
+        <h2 class="font-header text-3xl font-bold mb-4">Core Principles</h2>
+        <p class="mb-6 text-slate-600 dark:text-slate-400">Our architecture follows the "Five Pillars of Resilience": Scalability, Security, Efficiency, Reliability, and Observability. Every component must adhere to the asynchronous-first communication pattern to prevent cascading failures.</p>
+        
+        <!-- SVG Architecture Diagram Placeholder -->
+        <div class="my-10 p-6 bg-primary/5 border border-primary/10 rounded-xl flex flex-col items-center">
+          <div class="w-full max-w-lg">
+            <svg class="w-full h-auto" viewbox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect fill="#ef060e" fill-opacity="0.1" height="60" rx="8" stroke="#ef060e" stroke-width="2" width="80" x="10" y="70"></rect>
+              <text fill="#ef060e" font-family="Plus Jakarta Sans" font-size="10" font-weight="bold" text-anchor="middle" x="50" y="105">Edge Gateway</text>
+              <path d="M90 100 H140" stroke="#ef060e" stroke-dasharray="4 2" stroke-width="2"></path>
+              <polygon fill="#ef060e" points="140,100 135,97 135,103"></polygon>
+              
+              <rect fill="white" height="140" rx="12" stroke="#ef060e" stroke-opacity="0.2" stroke-width="1" width="100" x="150" y="30"></rect>
+              <text fill="#94a3b8" font-family="Plus Jakarta Sans" font-size="8" font-weight="bold" text-anchor="middle" x="200" y="50">K8S CLUSTER</text>
+              
+              <rect fill="#ef060e" height="30" rx="4" width="70" x="165" y="70"></rect>
+              <text fill="white" font-family="Plus Jakarta Sans" font-size="8" font-weight="bold" text-anchor="middle" x="200" y="88">Auth Svc</text>
+              
+              <rect fill="#ef060e" height="30" rx="4" width="70" x="165" y="115"></rect>
+              <text fill="white" font-family="Plus Jakarta Sans" font-size="8" font-weight="bold" text-anchor="middle" x="200" y="133">Data Svc</text>
+              
+              <path d="M250 100 H300" stroke="#ef060e" stroke-width="2"></path>
+              <circle cx="340" cy="100" fill="#ef060e" fill-opacity="0.05" r="30" stroke="#ef060e" stroke-width="2"></circle>
+              <text fill="#ef060e" font-family="Plus Jakarta Sans" font-size="10" font-weight="bold" text-anchor="middle" x="340" y="103">DB Tier</text>
+            </svg>
+          </div>
+          <p class="mt-4 text-xs font-bold text-slate-400 uppercase tracking-widest italic">Fig 1.1: Standard High-Level Interaction Model</p>
+        </div>
+
+        <h3 class="font-header text-2xl font-bold mb-4">Implementation Pattern</h3>
+        <p class="mb-4 text-slate-600 dark:text-slate-400">When implementing the service mesh, developers must ensure that sidecar proxies are configured for mutual TLS (mTLS). Below is a reference configuration for the environment manifest:</p>
+        
+        <!-- Code Block -->
+        <div class="bg-slate-900 rounded-xl p-6 mb-8 overflow-hidden relative group">
+          <div class="absolute right-4 top-4 opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="bg-white/10 hover:bg-white/20 text-white p-2 rounded-lg">
+              <span class="material-symbols-outlined text-sm">content_copy</span>
+            </button>
+          </div>
+          <pre class="font-mono text-sm text-slate-300 leading-relaxed"><code><span class="text-primary/70">apiVersion:</span> networking.ecosystem.io/v1alpha3
+<span class="text-primary/70">kind:</span> ServiceEntry
+<span class="text-primary/70">metadata:</span>
+  <span class="text-primary/70">name:</span> external-svc-passthrough
+<span class="text-primary/70">spec:</span>
+  <span class="text-primary/70">hosts:</span>
+  - api.external-partner.com
+  <span class="text-primary/70">ports:</span>
+  - <span class="text-primary/70">number:</span> 443
+    <span class="text-primary/70">name:</span> https
+    <span class="text-primary/70">protocol:</span> TLS
+  <span class="text-primary/70">resolution:</span> DNS
+  <span class="text-primary/70">location:</span> MESH_EXTERNAL</code></pre>
+        </div>
+
+        <h2 class="font-header text-3xl font-bold mb-4">Performance Requirements</h2>
+        <ul class="list-none p-0 space-y-4 mb-8 text-slate-600 dark:text-slate-400">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <span>P99 Latency must remain below 150ms for global traffic.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <span>Auto-scaling must trigger when CPU usage exceeds 70% for &gt;2 mins.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <span>All egress traffic must pass through the verified hub egress proxy.</span>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Right Sidebar: TOC & Metadata -->
+  <aside class="w-80 shrink-0 hidden xl:block">
+    <div class="sticky top-24 space-y-8">
+      
+      <!-- Table of Contents -->
+      <div class="glass-panel rounded-xl p-6">
+        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-slate-100 mb-4">On this page</h3>
+        <nav class="space-y-3">
+          <a class="block text-sm text-primary font-bold border-l-2 border-primary pl-4" href="#">Core Principles</a>
+          <a class="block text-sm text-slate-500 hover:text-primary transition-colors pl-4" href="#">Architecture Diagram</a>
+          <a class="block text-sm text-slate-500 hover:text-primary transition-colors pl-4" href="#">Implementation Pattern</a>
+          <a class="block text-sm text-slate-500 hover:text-primary transition-colors pl-4" href="#">Performance Requirements</a>
+        </nav>
+      </div>
+
+      <!-- Related Guidelines -->
+      <div class="space-y-4">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-primary px-2">Related Docs</h3>
+        <div class="space-y-3">
+          <div class="p-4 rounded-xl bg-white/50 dark:bg-white/5 border border-primary/5 hover:border-primary/20 transition-all cursor-pointer">
+            <p class="text-xs font-bold text-primary mb-1">SECURITY</p>
+            <h4 class="text-sm font-bold mb-1 leading-tight text-slate-800 dark:text-slate-100">Zero-Trust Network Access</h4>
+            <p class="text-xs text-slate-500">How to secure service-to-service calls.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white/50 dark:bg-white/5 border border-primary/5 hover:border-primary/20 transition-all cursor-pointer">
+            <p class="text-xs font-bold text-primary mb-1">DATA</p>
+            <h4 class="text-sm font-bold mb-1 leading-tight text-slate-800 dark:text-slate-100">Regional Data Residency</h4>
+            <p class="text-xs text-slate-500">Compliance requirements for PII.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Change History -->
+      <div class="glass-panel rounded-xl p-6">
+        <h3 class="text-sm font-bold mb-4 text-slate-800 dark:text-slate-100">History</h3>
+        <div class="space-y-4 text-slate-800 dark:text-slate-100">
+          <div class="relative pl-6 pb-4 border-l border-primary/20">
+            <div class="absolute left-[-5px] top-0 size-2 rounded-full bg-primary"></div>
+            <p class="text-xs font-bold">Oct 24, 2023</p>
+            <p class="text-xs text-slate-500">Updated mTLS configuration for Mesh v2</p>
+          </div>
+          <div class="relative pl-6">
+            <div class="absolute left-[-5px] top-0 size-2 rounded-full bg-slate-300"></div>
+            <p class="text-xs font-bold">Aug 12, 2023</p>
+            <p class="text-xs text-slate-500">Initial release of Cloud Guidelines</p>
+          </div>
+        </div>
+        <button class="w-full mt-4 py-2 text-xs font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors">View full changelog</button>
+      </div>
+    </div>
+  </aside>
+</div>

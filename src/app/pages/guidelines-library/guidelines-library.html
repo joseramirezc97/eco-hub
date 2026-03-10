@@ -1,0 +1,151 @@
+<div class="flex gap-8">
+  <aside class="w-72 shrink-0 flex flex-col">
+    <app-lib-sidebar></app-lib-sidebar>
+  </aside>
+
+  <!-- Main Content Area -->
+  <section class="flex-1">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <div class="flex items-center gap-2 text-slate-400 text-sm mb-1">
+          <span>Engineering</span>
+          <span class="material-symbols-outlined text-xs">chevron_right</span>
+          <span>Guidelines</span>
+          <span class="material-symbols-outlined text-xs">chevron_right</span>
+          <span class="text-primary font-medium">Architecture</span>
+        </div>
+        <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Architecture Guidelines</h1>
+      </div>
+      <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary/20">
+        <span class="material-symbols-outlined text-lg">add</span>
+        New Guideline
+      </button>
+    </div>
+
+    <!-- Guidelines Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Guideline Card 1 -->
+      <div class="glass-panel p-5 rounded-xl hover:border-primary/40 transition-all group cursor-pointer">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+            <span class="material-symbols-outlined text-primary">hub</span>
+          </div>
+          <span class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Approved</span>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">Kafka Event-Driven Schema Evolution</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-2">Standardized practices for managing Avro schemas across multi-tenant Kafka clusters including compatibility rules.</p>
+        
+        <div class="flex items-center justify-between pt-4 border-t border-primary/5">
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded-full overflow-hidden border border-primary/10">
+              <img alt="Author" class="w-full h-full object-cover" data-alt="Portrait of a male developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX6pxXOFqxe1JPwf_ttdGQpq9ZzTZxs15-EvvgQEuAnP6uI9RjxMcBx3r3oIdp_Z_JVJMexsuJ7fn2tQUUTUa3kNCZlSlAJLyQv9Ujr4g6fTuR_uitISXUNnnoWRbRmgOfR3mO8r1cIrexY1FrLiSvRSGXDWWR4RXuJBNbk1VgireBdjIq4vH6Ts0IZOi_RSidGjDVukild8AGBN1keTucFlhnrsi4zkft3ITvF64JTJ-8hLnqWJNRPTZqEFL2Iq3JDCJKMcdLLE18"/>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Marcus Chen</span>
+              <span class="text-[10px] text-slate-400">v2.4.1 • Updated 2d ago</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+        </div>
+      </div>
+      
+      <!-- Guideline Card 2 -->
+      <div class="glass-panel p-5 rounded-xl hover:border-primary/40 transition-all group cursor-pointer">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+            <span class="material-symbols-outlined text-primary">cloud</span>
+          </div>
+          <span class="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Under Review</span>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">Multi-Region Disaster Recovery Strategy</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-2">Architecture patterns for achieving sub-minute RTO/RPO across global AWS availability zones.</p>
+        
+        <div class="flex items-center justify-between pt-4 border-t border-primary/5">
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded-full overflow-hidden border border-primary/10">
+              <img alt="Author" class="w-full h-full object-cover" data-alt="Portrait of a female software architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAweDYv8pm_S5j05v-R-Fzi0Fq81DgZndFLbaU_29lGko473t-oYVA8yWha0zl9x6VbzbLG8g9jiB1Z2TLcxwvjtFEsq8nOqlKNUvPcXIhBSM7XUjK-yj1McfbByOEpzXk7JAFgTKkvpE5v3swUUijn36sQPXmFeHRS2Msen4atlu9I2Y_xUI7OJ5bezmhNyu7EScHcABUCg8zAt-djdEB33f2Jcefc00QkamSPV3JtTOJcyRsjV93ECLp53U5l-3OQU1oEbyencYb4"/>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Sarah Jenkins</span>
+              <span class="text-[10px] text-slate-400">v1.2.0 • Updated 5h ago</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+        </div>
+      </div>
+      
+      <!-- Guideline Card 3 -->
+      <div class="glass-panel p-5 rounded-xl hover:border-primary/40 transition-all group cursor-pointer">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+            <span class="material-symbols-outlined text-primary">dns</span>
+          </div>
+          <span class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Approved</span>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">API Gateway &amp; Rate Limiting Standards</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-2">Uniform rate limiting, authentication, and logging standards for all public-facing REST endpoints.</p>
+        
+        <div class="flex items-center justify-between pt-4 border-t border-primary/5">
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded-full overflow-hidden border border-primary/10">
+              <img alt="Author" class="w-full h-full object-cover" data-alt="Portrait of a senior backend developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKZG7hP_Ny1CdLsJkoMLKtSHElMsgj00vgHd5ZclFLl13kI1J2Lxt7xov9YCoXo1KwkfetQJPeMBctBKPcysb4GKfAaevnZ0YZszuZY-h5qIo3Xwv0aNGh-56W99i_1VxNM7h7qhDo4k2DlUTmzrNANdXJfj1380mmTF4OSd6QuB7W1qjiXZAHW9hwkQWA9Ipb0shxaLI1xML42ioml6I1SB7jp_Se-OF-0Q7bvYr9CsElyT0vxOOVq_EGI8ahFE8jUoYByP3LTKOS"/>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">David O'Reilly</span>
+              <span class="text-[10px] text-slate-400">v3.0.1 • Updated 1w ago</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+        </div>
+      </div>
+      
+      <!-- Guideline Card 4 -->
+      <div class="glass-panel p-5 rounded-xl hover:border-primary/40 transition-all group cursor-pointer">
+        <div class="flex justify-between items-start mb-4">
+          <div class="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+            <span class="material-symbols-outlined text-primary">storage</span>
+          </div>
+          <span class="bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Draft</span>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">Database Migration &amp; Zero-Downtime</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-2">Best practices for blue-green database deployments and rolling migrations using Liquibase.</p>
+        
+        <div class="flex items-center justify-between pt-4 border-t border-primary/5">
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 rounded-full overflow-hidden border border-primary/10">
+              <img alt="Author" class="w-full h-full object-cover" data-alt="Portrait of a woman lead engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyH87YODQ7s776J5WmMO-RbKY0Vip1M8Ai1_M8W735AgWK6jBVVk1Q-exUzqwlxnoHHVBjUYi2AZootTBo3bD_sdxzSJOhczQape9MOIFuoBLwV6aWK_pWyxXW47qtZR2UkqBvPFBSaNnGEjEAgv05OF80u2dot1agGlH9H2AJVVM665TZ8mrbTrLfNKBJ7xkRfRyant0z-9dIGmor1ggA2LbiAPAw6svEs3-fyvHhfoP9UMyDPe2bBdsMT2LNFDgQGI2e5W72OUh4"/>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Elena Rodriguez</span>
+              <span class="text-[10px] text-slate-400">v0.9.2 • Updated 2h ago</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination/Footer -->
+    <div class="mt-8 flex items-center justify-between px-2">
+      <span class="text-sm text-slate-500 dark:text-slate-400">Showing 4 of 48 guidelines</span>
+      <div class="flex gap-2">
+        <button class="px-3 py-1.5 rounded-lg border border-primary/10 text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors disabled:opacity-50" disabled="">
+          <span class="material-symbols-outlined text-sm">chevron_left</span>
+        </button>
+        <button class="px-3 py-1.5 rounded-lg bg-primary text-white font-bold text-sm">1</button>
+        <button class="px-3 py-1.5 rounded-lg border border-primary/10 text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors text-sm">2</button>
+        <button class="px-3 py-1.5 rounded-lg border border-primary/10 text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors text-sm">3</button>
+        <button class="px-3 py-1.5 rounded-lg border border-primary/10 text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors">
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Floating Help Button -->
+<div class="fixed bottom-6 right-6">
+  <button class="bg-primary hover:bg-primary/90 text-white h-12 w-12 rounded-full flex items-center justify-center shadow-xl shadow-primary/30 transition-transform hover:scale-105 active:scale-95">
+    <span class="material-symbols-outlined">auto_awesome</span>
+  </button>
+</div>

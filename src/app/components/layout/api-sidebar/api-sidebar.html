@@ -1,0 +1,77 @@
+<div class="glass-panel p-6 rounded-xl">
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="font-syne text-xl font-bold">API Endpoints</h3>
+    <div class="flex gap-2">
+      <span class="px-3 py-1 bg-green-500/10 text-green-600 text-[10px] font-bold rounded uppercase">GET</span>
+      <span class="px-3 py-1 bg-blue-500/10 text-blue-600 text-[10px] font-bold rounded uppercase">POST</span>
+      <span class="px-3 py-1 bg-orange-500/10 text-orange-600 text-[10px] font-bold rounded uppercase">PUT</span>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <div class="border border-primary/5 rounded-lg overflow-hidden group">
+      <div class="flex items-center justify-between p-4 bg-white/40 cursor-pointer">
+        <div class="flex items-center gap-4">
+          <span class="bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded">POST</span>
+          <span class="font-mono text-sm font-semibold">/v2/token/exchange</span>
+        </div>
+        <span class="material-symbols-outlined text-slate-400 group-hover:rotate-180 transition-transform">expand_more</span>
+      </div>
+      <div class="p-4 bg-white/20 border-t border-primary/5">
+        <p class="text-sm text-slate-600 mb-4">Exchange a provider authorization code for an Ambient Glass session token.</p>
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400">Parameters</h4>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-xs font-mono bg-primary/5 p-2 rounded">grant_type</div>
+            <div class="text-xs text-slate-500">Required. String. Fixed value: 'authorization_code'</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border border-primary/5 rounded-lg overflow-hidden">
+      <div class="flex items-center justify-between p-4 bg-white/40 cursor-pointer">
+        <div class="flex items-center gap-4">
+          <span class="bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded">GET</span>
+          <span class="font-mono text-sm font-semibold">/v2/user/profile</span>
+        </div>
+        <span class="material-symbols-outlined text-slate-400">expand_more</span>
+      </div>
+    </div>
+
+    <div class="border border-primary/5 rounded-lg overflow-hidden">
+      <div class="flex items-center justify-between p-4 bg-white/40 cursor-pointer">
+        <div class="flex items-center gap-4">
+          <span class="bg-orange-500 text-white text-[10px] font-black px-2 py-1 rounded">PUT</span>
+          <span class="font-mono text-sm font-semibold">/v2/user/mfa/enable</span>
+        </div>
+        <span class="material-symbols-outlined text-slate-400">expand_more</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="glass-panel p-6 rounded-xl border-primary/20 mt-6">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="material-symbols-outlined text-primary">terminal</span>
+    <h3 class="font-syne text-xl font-bold">Try it out</h3>
+  </div>
+  <div class="bg-[#1a0a0b] rounded-lg p-6 font-mono text-sm text-slate-300">
+    <div class="flex items-center gap-2 mb-4 border-b border-white/10 pb-2">
+      <span class="text-primary">Auth Context:</span>
+      <span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded">OIDC_PROVIDER</span>
+    </div>
+    <div class="space-y-2">
+      <p><span class="text-blue-400">curl</span> -X POST <span class="text-green-400">"https://api.ambient-glass.io/auth/v2/token/exchange"</span> \</p>
+      <p class="pl-4">-H <span class="text-green-400">"Content-Type: application/json"</span> \</p>
+      <p class="pl-4">-d '{</p>
+      <p class="pl-8"><span class="text-orange-300">"code"</span>: <span class="text-green-400">"AG_0982347234"</span>,</p>
+      <p class="pl-8"><span class="text-orange-300">"provider"</span>: <span class="text-green-400">"apple"</span></p>
+      <p class="pl-4">}'</p>
+    </div>
+    <button class="mt-6 w-full bg-primary py-3 rounded-lg font-bold text-white hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm">play_arrow</span>
+      Execute Request
+    </button>
+  </div>
+</div>

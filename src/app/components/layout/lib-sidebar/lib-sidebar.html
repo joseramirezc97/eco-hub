@@ -1,0 +1,66 @@
+<div class="glass-panel p-4 rounded-xl">
+  <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 px-2">Library Explorer</h3>
+  <nav class="flex flex-col gap-1">
+    <!-- Architecture Category -->
+    <div class="space-y-1">
+      <button class="w-full flex items-center gap-2 px-3 py-2 text-sm font-semibold text-primary bg-primary/10 rounded-lg">
+        <span class="material-symbols-outlined text-lg">account_tree</span>
+        Architecture
+        <span class="material-symbols-outlined text-sm ml-auto">expand_more</span>
+      </button>
+      <div class="pl-7 space-y-1">
+        <a class="block px-3 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-primary border-l border-primary/20" href="#">System Design</a>
+        <a class="block px-3 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-primary border-l border-primary/20" href="#">Microservices</a>
+        <a class="block px-3 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-primary border-l border-primary/20 font-medium text-primary bg-primary/5" href="#">Event-Driven Patterns</a>
+      </div>
+    </div>
+    
+    <!-- Security Category -->
+    <div class="mt-2">
+      <button class="w-full flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5 rounded-lg transition-colors">
+        <span class="material-symbols-outlined text-lg">shield</span>
+        Security
+        <span class="material-symbols-outlined text-sm ml-auto text-slate-400">chevron_right</span>
+      </button>
+    </div>
+    
+    <!-- DevOps Category -->
+    <div class="mt-2">
+      <button class="w-full flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5 rounded-lg transition-colors">
+        <span class="material-symbols-outlined text-lg">terminal</span>
+        DevOps
+        <span class="material-symbols-outlined text-sm ml-auto text-slate-400">chevron_right</span>
+      </button>
+    </div>
+    
+    <!-- Quality Category -->
+    <div class="mt-2">
+      <button class="w-full flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary/5 rounded-lg transition-colors">
+        <span class="material-symbols-outlined text-lg">verified</span>
+        Quality Assurance
+        <span class="material-symbols-outlined text-sm ml-auto text-slate-400">chevron_right</span>
+      </button>
+    </div>
+  </nav>
+</div>
+
+<div class="glass-panel p-4 rounded-xl mt-6">
+  <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 px-2">Filter by Status</h3>
+  <div class="flex flex-col gap-2">
+    <label class="flex items-center gap-3 px-2 py-1 cursor-pointer">
+      <input checked class="rounded text-primary focus:ring-primary/20 border-primary/20" type="checkbox"/>
+      <span class="text-sm text-slate-600 dark:text-slate-400">Approved</span>
+      <span class="ml-auto text-xs bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded-full">24</span>
+    </label>
+    <label class="flex items-center gap-3 px-2 py-1 cursor-pointer">
+      <input checked class="rounded text-primary focus:ring-primary/20 border-primary/20" type="checkbox"/>
+      <span class="text-sm text-slate-600 dark:text-slate-400">Under Review</span>
+      <span class="ml-auto text-xs bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 px-2 py-0.5 rounded-full">12</span>
+    </label>
+    <label class="flex items-center gap-3 px-2 py-1 cursor-pointer">
+      <input class="rounded text-primary focus:ring-primary/20 border-primary/20" type="checkbox"/>
+      <span class="text-sm text-slate-600 dark:text-slate-400">Draft</span>
+      <span class="ml-auto text-xs bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300 px-2 py-0.5 rounded-full">5</span>
+    </label>
+  </div>
+</div>

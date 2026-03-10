@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ef060e;
+  --color-background-light: #f8f5f5;
+  --color-background-dark: #230f10;
+  --color-accent-soft: #fceaea;
+  --font-display: "Be Vietnam Pro", sans-serif;
+  --font-header: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(239, 6, 14, 0.1);
+  }
+  
+  .dark .glass-panel {
+    background: rgba(35, 15, 16, 0.7);
+    border: 1px solid rgba(239, 6, 14, 0.2);
+  }
+
+  .ambient-glow {
+    position: fixed;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(239, 6, 14, 0.08) 0%, rgba(239, 6, 14, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
